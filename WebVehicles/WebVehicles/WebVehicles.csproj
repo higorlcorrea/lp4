@@ -57,6 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -70,6 +76,7 @@
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\slippry.css" />
     <Content Include="css\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="images\1.jpg" />
     <Content Include="images\11.jpg" />
     <Content Include="images\2.jpg" />
