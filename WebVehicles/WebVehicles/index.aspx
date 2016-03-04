@@ -6,15 +6,25 @@
     <title>WebVehicles</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-material-design.min.css" rel="stylesheet">
+
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/owl.carousel.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
+
+
+
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script src="/js/owl.carousel.js"></script>
     <!-- //Owl Carousel Assets -->
     <!-----768px-menu----->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/material.min.js"></script>
+    <script type="text/javascript" src="/js/ripples.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.mmenu.js"></script>
     <link type="text/css" rel="stylesheet" href="/css/jquery.mmenu.all.css" />
     <script type="text/javascript" src="/js/jquery.mmenu.js"></script>
     <script type="text/javascript">
@@ -125,15 +135,25 @@
             <h5 class="heading">Carros em destaque</h5>
             <div class="l-grids">
                 <div class="l-grid-1">
-                    <div class="desc">
+                    <div class="desc" style="color:white !important;">
                         <h3>Nome do carro</h3>
-                        <p>
-                            <i class="fa fa-money fa-2x" style="position: relative; top: 4px"></i>R$ 30.000,00
-                            <br />
-                            <i class="fa fa-money fa-2x" style="position: relative; top: 4px"></i>Volkwagem
-                            <br />
-                            <a href="#" style="font: inherit; color: inherit;"><i class="fa fa-search fa-2x" style="position: relative; top: 4px"></i>Saiba mais</a><br />
-                        </p>
+                        <div class="row">
+                            <div class="col-md-3"><i class="fa fa-money fa-2x" style="position: relative; bottom: 4px"></i></div>
+                            <div class="col-md-9">R$ 30.000,00</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"><i class="fa fa-money fa-2x" style="position: relative; bottom: 4px"></i></div>
+                            <div class="col-md-9">R$ 30.000,00</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"><i class="fa fa-money fa-2x" style="position: relative; bottom: 4px"></i></div>
+                            <div class="col-md-9">R$ 30.000,00</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="#" style="font: inherit; color: inherit;"><i class="fa fa-search fa-1x" style="position: relative; bottom: 1px"></i>Saiba mais</a><br />
+                            </div>
+                        </div>
                     </div>
                     <img src="images/im.jpg">
                     <div class="clear"></div>
@@ -172,7 +192,7 @@
 
     <div class="footer">
         <div class="wrap">
-            <div class="footer-left" style="width:100%;text-align:justify;">
+            <div class="footer-left" style="width: 100%; text-align: justify;">
                 <h3>Quem somos</h3>
                 <p>Criada em 1995, no início da internet brasileira, a WebMotors conquistou ao longo do tempo o posto de maior portal brasileiro no segmento automobilístico (Ibope Net View junho/2013).</p>
 
@@ -187,7 +207,7 @@
                 <p>Além disso, a WebMotors investe em tecnologia de ponta continuamente para manter a segurança dos dados e a sua privacidade durante toda a navegação. Usando as mais novas ferramentas, tecnologias e métodos disponíveis, a WebMotors garante disponibilidade e performance adequada para que sua experiência de navegação seja rápida e agradável.</p>
 
                 <p>Faça um test-drive agora mesmo no maior e mais completo site de veículos da internet brasileira.</p>
-               
+
             </div>
             <div class="clear"></div>
         </div>
