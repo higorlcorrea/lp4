@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebVehicles.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cadastrar.aspx.cs" Inherits="WebVehicles.cadastrar" %>
 
 <!DOCTYPE HTML>
 <html>
@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Código</label>
                                     <br />
-                                    <asp:TextBox ID="Codigo" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Codigo" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Categoria</label>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Modelo</label>
-                                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Modelo" runat="server" CssClass="form-control"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Ano</label>
@@ -130,6 +130,22 @@
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Foto</label>
                                     <asp:FileUpload ID="Foto" runat="server" />
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-raised btn-primary" Text="Salvar" OnClick="btnSalvar_Click" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnNovo" runat="server" CssClass="btn btn-raised btn-secondary" Text="Novo" OnClick="btnNovo_Click" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnAlterar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Alterar" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Cancelar" OnClick="btnCancelar_Click" />
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>

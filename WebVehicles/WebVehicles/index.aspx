@@ -42,7 +42,7 @@
             <div class="header">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/lg.png" alt="" />
+                        <img src="/images/lg.png" alt="" />
                         <h1>WebVehicles</h1>
                         <div class="clear"></div>
                     </a>
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="images/im.jpg">
+                    <img src="/images/im.jpg">
                     <div class="clear"></div>
                 </div>
                 <div class="l-grid-1 l-grid-2">
@@ -164,7 +164,7 @@
                         <span>2nd  &nbsp; sep</span>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                     </div>
-                    <img src="images/im.jpg">
+                    <img src="/images/im.jpg">
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
@@ -183,7 +183,7 @@
                     <p>Além de tudo neste site encontrei o menor valor para entrada em um financiamento em garagem!</p>
                 </div>
                 <div class="img_1">
-                    <img src="images/avator.png">
+                    <img src="/images/avator.png">
                 </div>
                 <div class="clear"></div>
             </div>
