@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +43,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Downloads\AjaxControlToolkit.Binary.NET45\AjaxControlToolkit.Binary.NET45\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="dapper">
+      <HintPath>..\..\..\..\..\Downloads\dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -61,6 +65,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\webvehiclesdb.mdf" />
+    <Content Include="App_Data\webvehiclesdb_log.ldf">
+      <DependentUpon>webvehiclesdb.mdf</DependentUpon>
+    </Content>
     <Content Include="cadastrar.aspx" />
     <Content Include="css\bootstrap-material-design.min.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -75,6 +83,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -180,6 +189,10 @@
     <Compile Include="cadastrar.aspx.designer.cs">
       <DependentUpon>cadastrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="classes\Carro.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\clsBanco.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

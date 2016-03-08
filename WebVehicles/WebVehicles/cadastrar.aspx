@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebVehicles.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cadastrar.aspx.cs" Inherits="WebVehicles.cadastrar" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -72,28 +72,29 @@
                             <form id="form1" runat="server">
                                 <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
                                 <div class="form-group">
+                                    <asp:Label ID="LabelMsg" runat="server" CssClass="control-label" Visible="False"></asp:Label>
+                                    <br />
+                                </div>
+                                <div class="form-group">
                                     <label for="codigo" class="control-label">Código</label>
-                                    <asp:TextBox ID="Codigo" runat="server" CssClass="form-control"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Codigo" CssClass="text-danger" ErrorMessage="O campo Código é obrigatório."></asp:RequiredFieldValidator>
+                                    <br />
+                                    <asp:TextBox ID="Codigo" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Categoria</label>
-                                    <asp:DropDownList ID="Categoria" runat="server" CssClass="form-control">
-                                        <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
+                                    <asp:DropDownList ID="Categoria" runat="server" CssClass="form-control" DataTextField="Nome" DataValueField="Id">
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Categoria" CssClass="text-danger" ErrorMessage="O campo Categoria é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Marca</label>
-                                    <asp:DropDownList ID="Marca" runat="server" CssClass="form-control">
-                                        <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
+                                    <asp:DropDownList ID="Marca" runat="server" CssClass="form-control" DataTextField="Nome" DataValueField="Id">
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Marca" CssClass="text-danger" ErrorMessage="O campo Marca é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Tipo</label>
-                                    <asp:DropDownList ID="Tipo" runat="server" CssClass="form-control">
-                                        <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
+                                    <asp:DropDownList ID="Tipo" runat="server" CssClass="form-control" DataTextField="Nome" DataValueField="Id">
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="Tipo" CssClass="text-danger" ErrorMessage="O campo Tipo é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
@@ -144,11 +145,21 @@
                                     <label for="codigo" class="control-label">Foto</label>
                                     <asp:FileUpload ID="Foto" runat="server" />
                                 </div>
-
                                 <div class="form-group">
-                                    
-                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Salvar" />
-                                    
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-raised btn-primary" Text="Salvar" OnClick="btnSalvar_Click" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnNovo" runat="server" CssClass="btn btn-raised btn-secondary" Text="Novo" OnClick="btnNovo_Click" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnAlterar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Alterar" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Cancelar" OnClick="btnCancelar_Click" />
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
