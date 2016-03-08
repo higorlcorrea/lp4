@@ -41,7 +41,7 @@ namespace WebVehicles.classes
 
         public int Inserir()
         {
-            return _conexao.Query<int>("insert into Carros values (@IdCategoria,@IdMarca,@IdTipo,@Modelo,@Ano,@Preco,@Proprietario,@Placa,@Cor,@Observacoes,@DataAquisicao )", this).First();
+            return _conexao.Query<int>("insert into Carros values (@IdCategoria,@IdMarca,@IdTipo,@Modelo,@Ano,@Preco,@Proprietario,@Placa,@Cor,@Observacoes,@DataAquisicao )", this).FirstOrDefault();
         }
 
         #endregion

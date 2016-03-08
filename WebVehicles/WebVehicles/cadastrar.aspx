@@ -69,26 +69,27 @@
                         <div class="row" style="margin: 0px 0px 0px 15px;">
                             <form id="form1" runat="server">
                                 <div class="form-group">
+                                    <asp:Label ID="LabelMsg" runat="server" CssClass="control-label" Visible="False"></asp:Label>
+                                    <br />
+                                </div>
+                                <div class="form-group">
                                     <label for="codigo" class="control-label">Código</label>
                                     <br />
                                     <asp:TextBox ID="Codigo" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Categoria</label>
-                                    <asp:DropDownList ID="Categoria" runat="server" CssClass="form-control">
-                                        <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
+                                    <asp:DropDownList ID="Categoria" runat="server" CssClass="form-control" DataTextField="Nome" DataValueField="Id">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Marca</label>
-                                    <asp:DropDownList ID="Marca" runat="server" CssClass="form-control">
-                                        <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
+                                    <asp:DropDownList ID="Marca" runat="server" CssClass="form-control" DataTextField="Nome" DataValueField="Id">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Tipo</label>
-                                    <asp:DropDownList ID="Tipo" runat="server" CssClass="form-control">
-                                        <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
+                                    <asp:DropDownList ID="Tipo" runat="server" CssClass="form-control" DataTextField="Nome" DataValueField="Id">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">

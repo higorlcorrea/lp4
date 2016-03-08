@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebCadastro;
 using WebVehicles.classes;
 
 namespace WebVehicles
@@ -12,7 +13,22 @@ namespace WebVehicles
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                var banco = new clsBanco();
+                Categoria.DataSource = banco.RetornaDS("select * from categoria");
+                Categoria.DataBind();
+                Tipo.DataSource = banco.RetornaDS("select * from tipo");
+                Tipo.DataBind();
+                Marca.DataSource = banco.RetornaDS("select * from marca");
+                Marca.DataBind();
 
+                Categoria.Items.Add(new ListItem { Selected = true, Value = "", Text = "Selecione" });
+                Marca.Items.Add(new ListItem { Selected = true, Value = "", Text = "Selecione" });
+                Tipo.Items.Add(new ListItem { Selected = true, Value = "", Text = "Selecione" });
+
+                EstadoBtnNovoAlterar();
+            }
         }
 
 
@@ -26,12 +42,15 @@ namespace WebVehicles
             var carro = CarregarDadosDb();
             if (carro.Codigo != 0)
             {
-
+                LabelMsg.Text = "Editado com sucesso!";
             }
             else
             {
                 carro.Inserir();
+                LabelMsg.Text = "Inserido com sucesso!";
             }
+
+            btnCancelar_Click(sender, e);
         }
 
         #region Métodos Privados
@@ -45,9 +64,9 @@ namespace WebVehicles
         private void LimparCampos()
         {
             Codigo.Text = "";
-            Categoria.SelectedIndex = 0;
-            Marca.SelectedIndex = 0;
-            Tipo.SelectedIndex = 0;
+            Categoria.SelectedValue = "";
+            Marca.SelectedValue = "";
+            Tipo.SelectedValue = "";
             Modelo.Text = "";
             Ano.Text = "";
             Preco.Text = "";
