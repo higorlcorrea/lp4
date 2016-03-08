@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebVehicles.index" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -68,53 +70,63 @@
                     <div class="col-md-8" style="float: none; margin: 0 auto;">
                         <div class="row" style="margin: 0px 0px 0px 15px;">
                             <form id="form1" runat="server">
+                                <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Código</label>
-                                    <br />
                                     <asp:TextBox ID="Codigo" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Codigo" CssClass="text-danger" ErrorMessage="O campo Código é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Categoria</label>
                                     <asp:DropDownList ID="Categoria" runat="server" CssClass="form-control">
                                         <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Categoria" CssClass="text-danger" ErrorMessage="O campo Categoria é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Marca</label>
                                     <asp:DropDownList ID="Marca" runat="server" CssClass="form-control">
                                         <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Marca" CssClass="text-danger" ErrorMessage="O campo Marca é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Tipo</label>
                                     <asp:DropDownList ID="Tipo" runat="server" CssClass="form-control">
                                         <asp:ListItem Selected="True" Value="0">Selecione</asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="Tipo" CssClass="text-danger" ErrorMessage="O campo Tipo é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Modelo</label>
-                                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Modelo" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="Modelo" CssClass="text-danger" ErrorMessage="O campo Modelo é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Ano</label>
                                     <asp:TextBox ID="Ano" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="Ano" CssClass="text-danger" ErrorMessage="O campo Ano é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Preço</label>
                                     <asp:TextBox ID="Preco" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="Preco" CssClass="text-danger" ErrorMessage="O campo Preço é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Proprietário</label>
                                     <asp:TextBox ID="Proprietario" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="Proprietario" CssClass="text-danger" ErrorMessage="O campo Proprietário é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Placa</label>
                                     <asp:TextBox ID="Placa" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="Placa" CssClass="text-danger" ErrorMessage="O campo Placa é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Cor</label>
                                     <asp:TextBox ID="Cor" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="Cor" CssClass="text-danger" ErrorMessage="O campo Cor é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="form-group">
@@ -125,11 +137,18 @@
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Data de Aquisição</label>
                                     <asp:TextBox ID="DataAquisicao" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="DataAquisicao" CssClass="text-danger" ErrorMessage="O campo Data de Aquisição é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Foto</label>
                                     <asp:FileUpload ID="Foto" runat="server" />
+                                </div>
+
+                                <div class="form-group">
+                                    
+                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Salvar" />
+                                    
                                 </div>
                             </form>
                         </div>
@@ -163,7 +182,8 @@
         </div>
     </div>
     <div class="copy">
-        <p>© <%= DateTime.Now.Year %>Desenvolvido por <a href="https://www.linkedin.com/in/higor-manoel-lima-correa-080b3bb2" target="_blank">Higor Correa</a></p>
+        <%--<p>© <%= ""+DateTime.Now.Year %>Desenvolvido por <a href="https://www.linkedin.com/in/higor-manoel-lima-correa-080b3bb2" target="_blank">Higor Correa</a></p>--%>
     </div>
+    
 </body>
 </html>
