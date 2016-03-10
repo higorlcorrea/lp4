@@ -41,10 +41,10 @@
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=4.5.7.429, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Downloads\AjaxControlToolkit.Binary.NET45\AjaxControlToolkit.Binary.NET45\AjaxControlToolkit.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\WebCadastro\WebCadastro\bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="dapper">
-      <HintPath>..\..\..\..\..\Downloads\dapper.dll</HintPath>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -69,6 +69,7 @@
     <Content Include="App_Data\webvehiclesdb_log.ldf">
       <DependentUpon>webvehiclesdb.mdf</DependentUpon>
     </Content>
+    <Content Include="listagem.aspx" />
     <Content Include="cadastrar.aspx" />
     <Content Include="css\bootstrap-material-design.min.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -182,6 +183,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="listagem.aspx.cs">
+      <DependentUpon>listagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listagem.aspx.designer.cs">
+      <DependentUpon>listagem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cadastrar.aspx.cs">
       <DependentUpon>cadastrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -147,18 +147,13 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-raised btn-primary" Text="Salvar" OnClick="btnSalvar_Click" />
                                         </div>
-                                        <div class="col-md-3">
-                                            <asp:Button ID="btnNovo" runat="server" CssClass="btn btn-raised btn-secondary" Text="Novo" OnClick="btnNovo_Click" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <asp:Button ID="btnAlterar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Alterar" />
-                                        </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Cancelar" OnClick="btnCancelar_Click" />
                                         </div>
+                                        <div class="col-md-offset-8"
                                     </div>
                                 </div>
                             </form>
