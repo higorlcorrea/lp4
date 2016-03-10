@@ -16,11 +16,16 @@ namespace WebVehicles
             if (!IsPostBack)
             {
                 var banco = new clsBanco();
-                GridCarros.DataSource = banco.RetornaDS(@"
-                    select c.*, m.Nome as Marca from carros c 
+                var ds = banco.RetornaDS(@"
+                    select c.*, 1 as Marca from carros c 
                         inner join marca m on m.Id = c.IdMarca
                 ");
-                GridCarros.DataBind();
+
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    GridCarros.DataSource = ds;
+                    GridCarros.DataBind();
+                }
             }
         }
     }

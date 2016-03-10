@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,12 +17,28 @@ namespace WebVehicles
             if (!IsPostBack)
             {
                 var banco = new clsBanco();
-                Categoria.DataSource = banco.RetornaDS("select * from categoria");
-                Categoria.DataBind();
-                Tipo.DataSource = banco.RetornaDS("select * from tipo");
-                Tipo.DataBind();
-                Marca.DataSource = banco.RetornaDS("select * from marca");
-                Marca.DataBind();
+                DataSet ds = null;
+
+                ds = banco.RetornaDS("select * from categoria");
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    Categoria.DataSource = ds;
+                    Categoria.DataBind();
+                }
+
+                ds = banco.RetornaDS("select * from tipo");
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    Tipo.DataSource = ds;
+                    Tipo.DataBind();
+                }
+
+                ds = banco.RetornaDS("select * from marca");
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    Marca.DataSource = ds;
+                    Marca.DataBind();
+                }
 
                 Categoria.Items.Add(new ListItem { Selected = true, Value = "", Text = "Selecione" });
                 Marca.Items.Add(new ListItem { Selected = true, Value = "", Text = "Selecione" });

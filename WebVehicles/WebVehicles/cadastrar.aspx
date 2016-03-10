@@ -9,7 +9,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-material-design.min.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -17,7 +16,8 @@
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
 
-
+    
+    <script type="text/javascript" src="/js/jquery-1.12.1.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
     <script type="text/javascript" src="/js/jquery.min.js"></script>
@@ -30,6 +30,8 @@
     <script type="text/javascript" src="/js/material.min.js"></script>
     <script type="text/javascript" src="/js/ripples.min.js"></script>
     <script type="text/javascript" src="/js/jquery.mmenu.js"></script>
+
+    <link href="/css/bootstrap-material-design.min.css" rel="stylesheet">
     <script type="text/javascript">
         //	The menu on the left
         $(function () {
