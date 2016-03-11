@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVehicles", "WebVehicles\WebVehicles.csproj", "{39473ED9-4B91-49EE-8A83-95DA46AF78A9}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "banco", "banco\banco.sqlproj", "{ADA3FCA6-0347-4528-A4AC-2424884541CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{39473ED9-4B91-49EE-8A83-95DA46AF78A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39473ED9-4B91-49EE-8A83-95DA46AF78A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39473ED9-4B91-49EE-8A83-95DA46AF78A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA3FCA6-0347-4528-A4AC-2424884541CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA3FCA6-0347-4528-A4AC-2424884541CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA3FCA6-0347-4528-A4AC-2424884541CB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ADA3FCA6-0347-4528-A4AC-2424884541CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA3FCA6-0347-4528-A4AC-2424884541CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA3FCA6-0347-4528-A4AC-2424884541CB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
