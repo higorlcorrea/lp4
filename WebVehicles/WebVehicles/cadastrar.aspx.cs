@@ -118,7 +118,7 @@ namespace WebVehicles
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            LabelMsg.Text = "";
+            LabelMsg.Text = "";            
             LimparCampos();
         }
     }

@@ -71,10 +71,10 @@
                     <div class="col-md-8" style="float: none; margin: 0 auto;">
                         <div class="row" style="margin: 0px 0px 0px 15px;">
                             
-                            <asp:GridView ID="GridCarros" runat="server" AutoGenerateColumns="False" CssClass="table">
+                            <asp:GridView ID="GridCarros" runat="server" AutoGenerateColumns="False" CssClass="table" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="GridCarros_PageIndexChanging">
                                 <Columns>
+                                    <asp:BoundField DataField="Id" HeaderText="Código" />
                                     <asp:BoundField DataField="Proprietario" HeaderText="Proprietário" />
-                                    <asp:BoundField DataField="Codigo" HeaderText="Código" />
                                     <asp:BoundField DataField="Marca" HeaderText="Marca" />
                                     <asp:BoundField DataField="Preco" HeaderText="Preço" DataFormatString="{0:c}" />
                                 </Columns>
@@ -111,7 +111,7 @@
         </div>
     </div>
     <div class="copy">
-        <%--<p>© <%= ""+DateTime.Now.Year %>Desenvolvido por <a href="https://www.linkedin.com/in/higor-manoel-lima-correa-080b3bb2" target="_blank">Higor Correa</a></p>--%>
+        <p>© <%= ""+DateTime.Now.Year %>Desenvolvido por <a href="https://www.linkedin.com/in/higor-manoel-lima-correa-080b3bb2" target="_blank">Higor Correa</a></p>
     </div>
     
     </form>

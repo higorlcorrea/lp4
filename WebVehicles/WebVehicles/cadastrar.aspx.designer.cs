@@ -157,15 +157,6 @@ namespace WebVehicles {
         protected global::System.Web.UI.WebControls.TextBox Preco;
         
         /// <summary>
-        /// Preco_MaskedEditExtender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.MaskedEditExtender Preco_MaskedEditExtender;
-        
-        /// <summary>
         /// RequiredFieldValidator7 control.
         /// </summary>
         /// <remarks>

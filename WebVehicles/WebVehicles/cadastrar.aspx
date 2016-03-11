@@ -115,26 +115,24 @@
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Preço</label>
                                     <asp:TextBox ID="Preco" runat="server" CssClass="form-control" MaxLength="19"></asp:TextBox>
-                                    <asp:MaskedEditExtender ID="Preco_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" DisplayMoney="Left" Enabled="True" TargetControlID="Preco">
-                                    </asp:MaskedEditExtender>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="Preco" CssClass="text-danger" ErrorMessage="O campo Preço é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Proprietário</label>
-                                    <asp:TextBox ID="Proprietario" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Proprietario" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="Proprietario" CssClass="text-danger" ErrorMessage="O campo Proprietário é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Placa</label>
                                     <asp:TextBox ID="Placa" runat="server" CssClass="form-control" MaxLength="8"></asp:TextBox>
-                                    <asp:MaskedEditExtender ID="Placa_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="aaa-9999" TargetControlID="Placa">
+                                    <asp:MaskedEditExtender ID="Placa_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="AAA-9999" TargetControlID="Placa">
                                     </asp:MaskedEditExtender>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="Placa" CssClass="text-danger" ErrorMessage="O campo Placa é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Cor</label>
-                                    <asp:TextBox ID="Cor" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Cor" runat="server" CssClass="form-control" MaxLength="30"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="Cor" CssClass="text-danger" ErrorMessage="O campo Cor é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
 
@@ -146,7 +144,7 @@
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Data de Aquisição</label>
                                     <asp:TextBox ID="DataAquisicao" runat="server" CssClass="form-control"></asp:TextBox>
-                                    <asp:MaskedEditExtender ID="DataAquisicao_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" MaskType="DateTime" TargetControlID="DataAquisicao">
+                                    <asp:MaskedEditExtender ID="DataAquisicao_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" MaskType="DateTime" TargetControlID="DataAquisicao" UserDateFormat="DayMonthYear">
                                     </asp:MaskedEditExtender>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="DataAquisicao" CssClass="text-danger" ErrorMessage="O campo Data de Aquisição é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
