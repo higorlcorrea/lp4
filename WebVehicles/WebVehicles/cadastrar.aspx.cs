@@ -52,9 +52,9 @@ namespace WebVehicles
             var carro = CarregarDadosDb();
 
             carro.Inserir();
-            LabelMsg.Text = "Inserido com sucesso!";
-
             LimparCampos();
+
+            LabelMsg.Text = "Inserido com sucesso!";
         }
 
         #region Métodos Privados

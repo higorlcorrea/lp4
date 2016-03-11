@@ -102,17 +102,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Modelo</label>
-                                    <asp:TextBox ID="Modelo" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Modelo" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="Modelo" CssClass="text-danger" ErrorMessage="O campo Modelo é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Ano</label>
-                                    <asp:TextBox ID="Ano" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Ano" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                                    <asp:MaskedEditExtender ID="Ano_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="9999" MaskType="Number" TargetControlID="Ano">
+                                    </asp:MaskedEditExtender>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="Ano" CssClass="text-danger" ErrorMessage="O campo Ano é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Preço</label>
-                                    <asp:TextBox ID="Preco" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Preco" runat="server" CssClass="form-control" MaxLength="19"></asp:TextBox>
+                                    <asp:MaskedEditExtender ID="Preco_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" DisplayMoney="Left" Enabled="True" TargetControlID="Preco">
+                                    </asp:MaskedEditExtender>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="Preco" CssClass="text-danger" ErrorMessage="O campo Preço é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
@@ -122,7 +126,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Placa</label>
-                                    <asp:TextBox ID="Placa" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Placa" runat="server" CssClass="form-control" MaxLength="8"></asp:TextBox>
+                                    <asp:MaskedEditExtender ID="Placa_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="aaa-9999" TargetControlID="Placa">
+                                    </asp:MaskedEditExtender>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="Placa" CssClass="text-danger" ErrorMessage="O campo Placa é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
 
@@ -134,12 +140,14 @@
 
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Observações</label>
-                                    <asp:TextBox ID="Observacoes" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Observacoes" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Data de Aquisição</label>
                                     <asp:TextBox ID="DataAquisicao" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <asp:MaskedEditExtender ID="DataAquisicao_MaskedEditExtender" runat="server" Century="2000" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" MaskType="DateTime" TargetControlID="DataAquisicao">
+                                    </asp:MaskedEditExtender>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="DataAquisicao" CssClass="text-danger" ErrorMessage="O campo Data de Aquisição é obrigatório."></asp:RequiredFieldValidator>
                                 </div>
 
@@ -155,7 +163,7 @@
                                         <div class="col-md-2">
                                             <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Cancelar" OnClick="btnCancelar_Click" />
                                         </div>
-                                        <div class="col-md-offset-8"
+                                        <div class="col-md-offset-8"></div>
                                     </div>
                                 </div>
                             </form>
