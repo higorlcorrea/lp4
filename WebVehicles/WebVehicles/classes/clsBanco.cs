@@ -15,8 +15,8 @@ namespace WebCadastro
 
         public clsBanco()
         {
-            string sStringConexao =
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|webvehiclesdb.mdf;Integrated Security=True";
+            string sStringConexao = System.Configuration.ConfigurationManager.ConnectionStrings["Banco"].ToString();
+            //string sStringConexao =@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|webvehiclesdb.mdf;Integrated Security=True";
 
             _conexao = new SqlConnection(sStringConexao);
             _comando = new SqlCommand();
