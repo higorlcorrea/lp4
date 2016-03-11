@@ -130,6 +130,15 @@ namespace WebVehicles {
         protected global::System.Web.UI.WebControls.TextBox Ano;
         
         /// <summary>
+        /// Ano_MaskedEditExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.MaskedEditExtender Ano_MaskedEditExtender;
+        
+        /// <summary>
         /// RequiredFieldValidator6 control.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace WebVehicles {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Preco;
+        
+        /// <summary>
+        /// Preco_MaskedEditExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.MaskedEditExtender Preco_MaskedEditExtender;
         
         /// <summary>
         /// RequiredFieldValidator7 control.
@@ -182,6 +200,15 @@ namespace WebVehicles {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Placa;
+        
+        /// <summary>
+        /// Placa_MaskedEditExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.MaskedEditExtender Placa_MaskedEditExtender;
         
         /// <summary>
         /// RequiredFieldValidator9 control.
@@ -227,6 +254,15 @@ namespace WebVehicles {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DataAquisicao;
+        
+        /// <summary>
+        /// DataAquisicao_MaskedEditExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.MaskedEditExtender DataAquisicao_MaskedEditExtender;
         
         /// <summary>
         /// RequiredFieldValidator11 control.
