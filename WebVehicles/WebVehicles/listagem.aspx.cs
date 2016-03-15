@@ -23,8 +23,9 @@ namespace WebVehicles
         {
             var banco = new clsBanco();
             var ds = banco.RetornaDS(@"
-                    select c.*, 1 as Marca from carros c 
+                    select c.*, m.Nome as Marca, t.Nome as Tipo from carros c 
                         inner join marca m on m.Id = c.IdMarca
+                        inner join tipo t on t.Id = c.IdTipo
                 ");
 
             if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)

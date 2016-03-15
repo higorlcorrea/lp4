@@ -68,16 +68,20 @@
             <h5 class="heading">LISTAGEM DE CARROS</h5>
             <div class="test-grids">
                 <div class="row">
-                    <div class="col-md-8" style="float: none; margin: 0 auto;">
+                    <div class="col-md-12" style="float: none; margin: 0 auto; padding: 0 16px 0 0;">
                         <div class="row" style="margin: 0px 0px 0px 15px;">
                             
-                            <asp:GridView ID="GridCarros" runat="server" AutoGenerateColumns="False" CssClass="table" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="GridCarros_PageIndexChanging">
+                            <asp:GridView ID="GridCarros" runat="server" AutoGenerateColumns="False" CssClass="table table-middle" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="GridCarros_PageIndexChanging">
                                 <Columns>
+                                    <asp:ImageField DataImageUrlField="Foto">
+                                    </asp:ImageField>
                                     <asp:BoundField DataField="Id" HeaderText="Código" />
                                     <asp:BoundField DataField="Proprietario" HeaderText="Proprietário" />
                                     <asp:BoundField DataField="Marca" HeaderText="Marca" />
+                                    <asp:BoundField DataField="Tipo" HeaderText="Tipo" />
                                     <asp:BoundField DataField="Preco" HeaderText="Preço" DataFormatString="{0:c}" />
                                 </Columns>
+                                <HeaderStyle CssClass="cabecalho" />
                             </asp:GridView>
                             
                         </div>
