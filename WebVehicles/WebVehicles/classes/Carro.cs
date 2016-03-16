@@ -1,7 +1,10 @@
 ﻿using Dapper;
 using System;
+using System.Data;
 using System.Linq;
+using System.Data.Entity;
 using WebCadastro;
+using System.Collections.Generic;
 
 namespace WebVehicles.classes
 {
@@ -9,7 +12,7 @@ namespace WebVehicles.classes
     {
         #region Propriedades Públicas
 
-        public int Codigo { get; set; }
+        public int Id { get; set; }
 
         public int IdCategoria { get; set; }
 
@@ -41,9 +44,20 @@ namespace WebVehicles.classes
 
         public int Inserir()
         {
-            return _conexao.Query<int>("insert into Carros values (@IdCategoria,@IdMarca,@IdTipo,@Modelo,@Ano,@Preco,@Proprietario,@Placa,@Cor,@Observacoes,@DataAquisicao,'' )", this).FirstOrDefault();
+            return _conexao.Query<int>("insert into Carros values (@IdCategoria,@IdMarca,@IdTipo,@Modelo,@Ano,@Preco,@Proprietario,@Placa,@Cor,@Observacoes,@DataAquisicao,@Foto)", this).FirstOrDefault();
+        }
+
+        public void Carregar(CarroFilter filtro)
+        {
+            var sql = "";
+            if (filtro.Id.HasValue)
+            {
+            }
+
         }
 
         #endregion
+
+
     }
 }

@@ -46,6 +46,7 @@
       <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -181,6 +182,7 @@
     <Content Include="js\ripples.min.js" />
     <Content Include="js\script.js" />
     <Content Include="js\scripts-f0e4e0c2.js" />
+    <Content Include="visualizar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +196,7 @@
     <Compile Include="classes\Carro.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="classes\CarroFilter.cs" />
     <Compile Include="classes\clsBanco.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -210,6 +213,16 @@
       <DependentUpon>listagem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="visualizar.aspx.cs">
+      <DependentUpon>visualizar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visualizar.aspx.designer.cs">
+      <DependentUpon>visualizar.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\carros\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

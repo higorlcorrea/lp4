@@ -10,7 +10,7 @@
 namespace WebVehicles {
     
     
-    public partial class cadastrar {
+    public partial class visualizar {
         
         /// <summary>
         /// form1 control.

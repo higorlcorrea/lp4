@@ -1,21 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebCadastro;
 using WebVehicles.classes;
 
 namespace WebVehicles
 {
-    public partial class cadastrar : System.Web.UI.Page
+    public partial class visualizar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            var valido = false;
+
+            if (Request["Id"] != null)
             {
+
                 var banco = new clsBanco();
                 DataSet ds = null;
 
@@ -44,57 +43,26 @@ namespace WebVehicles
                 Marca.Items.Add(new ListItem { Selected = true, Value = "", Text = "Selecione" });
                 Tipo.Items.Add(new ListItem { Selected = true, Value = "", Text = "Selecione" });
 
-            }
-        }
+                var id = 0;
 
-        protected void btnSalvar_Click(object sender, EventArgs e)
-        {
-            var carro = CarregarDadosDb();
-            if (Foto.HasFile)
-            {
-
-                var caminho = Server.MapPath("images\\carros\\" + Foto.FileName);
-
-                if (System.IO.File.Exists(caminho))
+                if (int.TryParse(Request["Id"].ToString(), out id))
                 {
-                    System.IO.File.Delete(caminho);
+                    valido = true;
+                    CarregarDados(id);
                 }
-
-                Foto.SaveAs(caminho);
-                carro.Foto = "/images/carros/" + Foto.FileName;
-                carro.Inserir();
-
-                LimparCampos();
-
-                LabelMsg.Text = "Inserido com sucesso!";
             }
 
-            LabelMsg.Text = "A foto é obrigatória";
+            if (!valido)
+            {
+                Response.Redirect("listagem.aspx");
+            }
         }
 
-        #region Métodos Privados
-
-        private void LimparCampos()
-        {
-            Codigo.Text = "";
-            Categoria.SelectedValue = "";
-            Marca.SelectedValue = "";
-            Tipo.SelectedValue = "";
-            Modelo.Text = "";
-            Ano.Text = "";
-            Preco.Text = "";
-            Proprietario.Text = "";
-            Placa.Text = "";
-            Cor.Text = "";
-            Observacoes.Text = "";
-            DataAquisicao.Text = "";
-            Foto = new FileUpload();
-        }
-
-        private Carro CarregarDadosDb()
+        private void CarregarDados(int id)
         {
             var c = new Carro();
 
+            c.Carregar(new CarroFilter { Id = id });
             if (Codigo.Text != "")
             {
                 c.Id = Convert.ToInt32(Codigo.Text);
@@ -126,15 +94,6 @@ namespace WebVehicles
                 c.DataAquisicao = Convert.ToDateTime(DataAquisicao.Text);
             }
 
-            return c;
-        }
-
-        #endregion
-
-        protected void btnCancelar_Click(object sender, EventArgs e)
-        {
-            LabelMsg.Text = "";
-            LimparCampos();
         }
     }
 }

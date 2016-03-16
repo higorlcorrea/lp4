@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cadastrar.aspx.cs" Inherits="WebVehicles.cadastrar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="visualizar.aspx.cs" Inherits="WebVehicles.visualizar" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -152,17 +152,6 @@
                                 <div class="form-group">
                                     <label for="codigo" class="control-label">Foto</label>
                                     <asp:FileUpload ID="Foto" runat="server" />
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-raised btn-primary" Text="Salvar" OnClick="btnSalvar_Click" />
-                                        </div>
-                                        <div class="col-md-2">
-                                            <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-raised btn-secundary" Text="Cancelar" OnClick="btnCancelar_Click" />
-                                        </div>
-                                        <div class="col-md-offset-8"></div>
-                                    </div>
                                 </div>
                             </form>
                         </div>

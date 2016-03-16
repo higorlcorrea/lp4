@@ -2927,3 +2927,14 @@ ul.sidebar_1 li {
 	}
 }
 /*****  //Media Quries for 320px tabs *****/
+
+.cabecalho
+{
+    color:#414A5A;
+    font-weight:bold;
+    text-align:center !important;
+}
+
+.table-middle td, .table-middle th{
+    vertical-align:middle !important;
+}
