@@ -74,6 +74,7 @@
                             <asp:GridView ID="GridCarros" runat="server" AutoGenerateColumns="False" CssClass="table table-middle" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="GridCarros_PageIndexChanging">
                                 <Columns>
                                     <asp:ImageField DataImageUrlField="Foto">
+                                        <ItemStyle Height="300px" Width="300px" />
                                     </asp:ImageField>
                                     <asp:BoundField DataField="Id" HeaderText="Código" />
                                     <asp:BoundField DataField="Proprietario" HeaderText="Proprietário" />

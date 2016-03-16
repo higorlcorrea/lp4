@@ -61,39 +61,39 @@ namespace WebVehicles
         private void CarregarDados(int id)
         {
             var c = new Carro();
-
-            c.Carregar(new CarroFilter { Id = id });
-            if (Codigo.Text != "")
+            try
             {
-                c.Id = Convert.ToInt32(Codigo.Text);
+                c = c.Carregar(id);
+
+                Codigo.Text = c.Id.ToString();
+
+                Categoria.SelectedValue = c.IdCategoria.ToString();
+                Marca.SelectedValue = c.IdMarca.ToString();
+                Tipo.SelectedValue = c.IdTipo.ToString();
+
+                Modelo.Text = c.Modelo;
+
+                Ano.Text = c.Ano.ToString();
+
+                Preco.Text = "R$ " + c.Preco.ToString("#,0.00");
+
+                Proprietario.Text = c.Proprietario;
+
+                Placa.Text = c.Placa;
+
+
+                Cor.Text = c.Cor;
+
+                Observacoes.Text = c.Observacoes;
+
+                DataAquisicao.Text = c.DataAquisicao.ToString("dd/MM/yyyy");
+                Image1.ImageUrl = "~/" + c.Foto;
             }
-
-            c.IdCategoria = Convert.ToInt32(Categoria.SelectedValue);
-            c.IdMarca = Convert.ToInt32(Marca.SelectedValue);
-            c.IdTipo = Convert.ToInt32(Tipo.SelectedValue);
-
-            c.Modelo = Modelo.Text;
-
-            if (Ano.Text != "")
+            catch (Exception e)
             {
-                c.Ano = Convert.ToInt32(Ano.Text);
+                Response.Redirect("/listagem.aspx");
             }
-
-            if (Preco.Text != "")
-            {
-                c.Preco = Convert.ToDecimal(Preco.Text);
-            }
-
-            c.Proprietario = Proprietario.Text;
-            c.Placa = Placa.Text;
-            c.Cor = Cor.Text;
-            c.Observacoes = Observacoes.Text;
-
-            if (DataAquisicao.Text != "")
-            {
-                c.DataAquisicao = Convert.ToDateTime(DataAquisicao.Text);
-            }
-
         }
+
     }
 }

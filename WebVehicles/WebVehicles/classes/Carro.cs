@@ -47,13 +47,11 @@ namespace WebVehicles.classes
             return _conexao.Query<int>("insert into Carros values (@IdCategoria,@IdMarca,@IdTipo,@Modelo,@Ano,@Preco,@Proprietario,@Placa,@Cor,@Observacoes,@DataAquisicao,@Foto)", this).FirstOrDefault();
         }
 
-        public void Carregar(CarroFilter filtro)
+        public Carro Carregar(int id)
         {
-            var sql = "";
-            if (filtro.Id.HasValue)
-            {
-            }
+            var lista = _conexao.Query<Carro>("select * from carros where Id = @Id;", new { Id = id }).ToList();
 
+            return lista.First();
         }
 
         #endregion

@@ -67,9 +67,14 @@ namespace WebVehicles
                 LimparCampos();
 
                 LabelMsg.Text = "Inserido com sucesso!";
+                Response.Redirect("/listagem.aspx");
+            }
+            else
+            {
+                LabelMsg.Text = "A foto é obrigatória";
+                LabelMsg.Visible = true;
             }
 
-            LabelMsg.Text = "A foto é obrigatória";
         }
 
         #region Métodos Privados

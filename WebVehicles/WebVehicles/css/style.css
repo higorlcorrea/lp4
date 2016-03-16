@@ -2938,3 +2938,6 @@ ul.sidebar_1 li {
 .table-middle td, .table-middle th{
     vertical-align:middle !important;
 }
+.display-block{
+    display:block;
+}
