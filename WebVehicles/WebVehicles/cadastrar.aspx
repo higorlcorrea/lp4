@@ -16,7 +16,7 @@
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
 
-    
+
     <script type="text/javascript" src="/js/jquery-1.12.1.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
@@ -50,10 +50,10 @@
     <div class="header_bg">
         <div class="wrap">
             <div class="header">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="/images/lg.png" alt="" />
-                        <h1>WebVehicles</h1>
+                <div class="" style="text-align:center;">
+                    <a href="/index.aspx">
+                        <img src="/images/lg.png" alt="" height="150" style="display:block; margin:  auto;" />
+                        
                         <div class="clear"></div>
                     </a>
                 </div>
@@ -62,7 +62,40 @@
         </div>
     </div>
     <!-- start header -->
+    <div class="header_btm">
+        <div class="wrap">
+            <!------start-768px-menu---->
+            <div id="page">
+                <div id="header">
+                    <a class="navicon" href="#menu-left"></a>
+                </div>
+                <nav id="menu-left">
+                    <ul>
+                        <li><a href="/index.aspx">Inicio</a></li>
 
+                        <li><a href="/listagem.aspx">Carros</a></li>
+                        <li class="active"><a href="/cadastrar.aspx">Cadastrar Carro</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!------start-768px-menu---->
+            <div class="header_sub">
+                <div class="h_menu">
+                    <ul>
+                        <li><a href="/index.aspx">Inicio</a></li>
+
+                        <li><a href="/listagem.aspx">Carros</a></li>
+                        <li class="active"><a href="/cadastrar.aspx">Cadastrar Carro</a></li>
+                    </ul>
+                </div>
+                <div class="h_search">
+                    <form>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
     <div class="testimonial">
         <!-- start last_posts -->
         <div class="wrap">
@@ -198,6 +231,6 @@
     <div class="copy">
         <%--<p>© <%= ""+DateTime.Now.Year %>Desenvolvido por <a href="https://www.linkedin.com/in/higor-manoel-lima-correa-080b3bb2" target="_blank">Higor Correa</a></p>--%>
     </div>
-    
+
 </body>
 </html>

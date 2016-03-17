@@ -40,10 +40,10 @@
     <div class="header_bg">
         <div class="wrap">
             <div class="header">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="/images/lg.png" alt="" />
-                        <h1>WebVehicles</h1>
+                <div class="" style="text-align:center;">
+                    <a href="/index.aspx">
+                        <img src="/images/lg.png" alt="" height="150" style="display:block; margin:  auto;" />
+                        
                         <div class="clear"></div>
                     </a>
                 </div>
@@ -61,10 +61,10 @@
                 </div>
                 <nav id="menu-left">
                     <ul>
-                        <li class="active"><a href="index.html">Inicio</a></li>
-                        <li><a href="about.html">Sobre Nós</a></li>
-                        <li><a href="services.html">Carros</a></li>
-                        <li><a href="pages.html">Cadastrar Carro</a></li>
+                        <li class="active"><a href="/index.aspx">Inicio</a></li>
+                        
+                        <li><a href="/listagem.aspx">Carros</a></li>
+                        <li><a href="/cadastrar.aspx">Cadastrar Carro</a></li>
                     </ul>
                 </nav>
             </div>
@@ -72,16 +72,16 @@
             <div class="header_sub">
                 <div class="h_menu">
                     <ul>
-                        <li class="active"><a href="index.html">Inicio</a></li>
-                        <li><a href="about.html">Sobre Nós</a></li>
-                        <li><a href="services.html">Carros</a></li>
-                        <li><a href="pages.html">Cadastrar Carro</a></li>
+                        <li class="active"><a href="/index.aspx">Inicio</a></li>
+                        
+                        <li><a href="/listagem.aspx">Carros</a></li>
+                        <li><a href="/cadastrar.aspx">Cadastrar Carro</a></li>
                     </ul>
                 </div>
                 <div class="h_search">
                     <form>
-                        <input type="text" value="" placeholder="Procurar carros...">
-                        <input type="submit" value="">
+                        
+                        
                     </form>
                 </div>
                 <div class="clear"></div>
@@ -132,39 +132,14 @@
     <div class="last_posts">
         <!-- start last_posts -->
         <div class="wrap">
-            <h5 class="heading">Carros em destaque</h5>
             <div class="l-grids">
                 <div class="l-grid-1">
-                    <div class="desc" style="color:white !important;">
-                        <h3>Nome do carro</h3>
-                        <div class="row">
-                            <div class="col-md-3"><i class="fa fa-money fa-2x" style="position: relative; bottom: 4px"></i></div>
-                            <div class="col-md-9">R$ 30.000,00</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3"><i class="fa fa-money fa-2x" style="position: relative; bottom: 4px"></i></div>
-                            <div class="col-md-9">R$ 30.000,00</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3"><i class="fa fa-money fa-2x" style="position: relative; bottom: 4px"></i></div>
-                            <div class="col-md-9">R$ 30.000,00</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a href="#" style="font: inherit; color: inherit;"><i class="fa fa-search fa-1x" style="position: relative; bottom: 1px"></i>Saiba mais</a><br />
-                            </div>
-                        </div>
+                    <div class="desc" style="width:100%;">
+                        <a href="listagem.aspx">
+                        <h3>Clique aqui para visualizar todos os nossos carros!</h3>
+                        <p>Carros para todos os estilos, gostos e exigências.</p>
+                        </a>
                     </div>
-                    <img src="/images/im.jpg">
-                    <div class="clear"></div>
-                </div>
-                <div class="l-grid-1 l-grid-2">
-                    <div class="desc">
-                        <h3>Lorem ipsum dolor amet,consectetur</h3>
-                        <span>2nd  &nbsp; sep</span>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                    </div>
-                    <img src="/images/im.jpg">
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>

@@ -2941,3 +2941,7 @@ ul.sidebar_1 li {
 .display-block{
     display:block;
 }
+.table-middle th{
+    background-color:#CCC;
+    text-align:center;
+}
